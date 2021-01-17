@@ -1,4 +1,4 @@
-# Basic instructions for using Nano with uproot3:
+# Basic instructions for using Nano with uproot:
 
 - The files are under https://cernbox.cern.ch/index.php/s/Ru7Hm4sjbP16Xtx
 - Currently only copied part of the 2016 Simulation of ttbar dilepton events, with about 1M events in total. More events and more channels can be produced, if necessary.
