@@ -1,4 +1,4 @@
-## Basic instructions for using Nano with uproot3:
+# Basic instructions for using Nano with uproot3:
 
 - The files are under https://cernbox.cern.ch/index.php/s/Ru7Hm4sjbP16Xtx
 - Currently only copied part of the 2016 Simulation of ttbar dilepton events, with about 1M events in total. More events and more channels can be produced, if necessary.
@@ -6,14 +6,15 @@
     - PF_pt, PF_eta, PF_phi, PF_charge, PF_mass, 
 	- PF_fromPV: the PV fitting status for charged particles
 	- PF_puppiWeight: puppiWeight for PF candidates
-- The root files can be read into memory with uproot (https://github.com/scikit-hep/uproot3). 
+- The root files can be read into memory with uproot (https://github.com/scikit-hep/uproot4). 
 
+## Prepare the enviroment with uproot
 ```
 conda create -n DeepPuppi python=3.8
 conda activate DeepPuppi
-pip install uproot3
-
+pip install uproot
+pip install awkward
+pip install matplotlib
 ```
 
-
-
+One example of reading these files and making a basic plot can be found from the demo `demo.py`
