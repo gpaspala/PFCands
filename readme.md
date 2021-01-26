@@ -17,6 +17,7 @@ pip install awkward
 pip install matplotlib
 ```
 
+## Some examples
 One example of reading these files and making a basic plot can be found from the demo `demo.py`. The variable distributions can be plotted with `demo.py`.
 
 `Visualization.ipynb` provides a short script to plot the distribution of generator-level truth particles and reconstructed PF Candidates in the eta-phi space.
