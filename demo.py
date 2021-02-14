@@ -1,6 +1,7 @@
 import uproot
 import awkward as ak
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 # read the ttree
@@ -12,6 +13,11 @@ pfcands = tree.arrays(tree.keys('PF_*') + ['nPF'], entry_start=0, entry_stop=100
 plt.figure()
 plt.hist( ak.to_numpy(pfcands['nPF']), bins=50, range=(0,3000), histtype='step')
 plt.savefig("nPF.png")
+
+# get the unique pdgIds
+pdgIds = ak.to_numpy(ak.flatten(pfcands['PF_pdgId']))
+print("unique pdgIds: ", np.unique(pdgIds))
+print("unique abs(pdgIds): ", np.unique(abs(pdgIds)))
 
 # calculate the average of abs(PF_dxy) for charged pf candidates 
 dxyavg_PV = ak.to_numpy(ak.mean(abs(pfcands['PF_dxy']),weight=((pfcands['PF_charge']!=0) * (pfcands['PF_puppiWeight']==1)), axis=1), allow_missing=False)
