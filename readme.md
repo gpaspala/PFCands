@@ -15,6 +15,8 @@ conda activate DeepPuppi
 pip install uproot
 pip install awkward
 pip install matplotlib
+pip install h5py
+pip install mplhep
 ```
 
 ## Some examples
